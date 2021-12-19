@@ -117,7 +117,7 @@ def XPT2CSV(os_walk_path, input_prefix, output_prefix, columns_map):
         data = pd.read_sas(read_path, encoding='latin_1')
         if columns_map:
             data = replaceColumns(data, columns_map)
-        data.to_csv(write_path, index=True)
+        data.to_csv(write_path, index=True, quoting=1)
 
 
 def main():
